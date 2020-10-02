@@ -6,10 +6,14 @@ facec = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 model = FacialExpressionModel("model.json", "model_weights.h5")
 font = cv2.FONT_HERSHEY_SIMPLEX
 
+# Video camera class 
+
 class VideoCamera(object):
     def __init__(self):
         self.video = cv2.VideoCapture(0)
-
+    
+#     Constructor
+    
     def __del__(self):
         self.video.release()
 
